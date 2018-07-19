@@ -8,7 +8,7 @@
       <p class="alert" v-if="errors.has('skill')">{{ errors.first('skill') }} </p>
      </transition>
        </form>
-     
+
      <ul>
        <transition-group name="list" enter-active-class="animated bounceInUp" leave-active-class="animated bounceOutDown">
           <li v-for="(data, index) in skills" :key='index'>
@@ -29,18 +29,18 @@ export default {
     return {
       skill: '',
       skills: [
-        {"skill": "Vue.js"},
-        {"skill": "Frontend Developer"}
+        {'skill': 'Vue.js'},
+        {'skill': 'Frontend Developer'}
       ]
     }
   },
   methods: {
     addSkill () {
       this.skills.push({skill: this.skill})
-      this.skill = '';
+      this.skill = ''
     },
-    remove(id) {
-      this.skills.splice(id,1);
+    remove (id) {
+      this.skills.splice(id, 1)
     }
   }
 }
